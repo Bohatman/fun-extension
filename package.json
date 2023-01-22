@@ -10,16 +10,42 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:fun-extension.helloWorld"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "configuration": {
+        "type": "object",
+        "properties": {
+          "fun.breaktime": {
+            "type": "number",
+            "default": 5
+          }
+        }
+    },
+    "commands":[
       {
-        "command": "fun-extension.helloWorld",
-        "title": "Hello World"
+        "command": "fun-extension.timer",
+        "title": "test"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "code-review",
+          "title": "Code Review",
+          "icon": "images/dep.svg"
+        }
+      ]
+    },
+    "views": {
+      "code-review": [
+        {
+          "id": "Mark",
+          "name": "Dependencies"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
