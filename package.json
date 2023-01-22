@@ -28,24 +28,7 @@
         "command": "fun-extension.timer",
         "title": "test"
       }
-    ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "code-review",
-          "title": "Code Review",
-          "icon": "images/dep.svg"
-        }
-      ]
-    },
-    "views": {
-      "code-review": [
-        {
-          "id": "Mark",
-          "name": "Dependencies"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
